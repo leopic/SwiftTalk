@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,15 @@
 		B3B97D4D25AA7B3300BEC4F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B97D4C25AA7B3300BEC4F6 /* ContentView.swift */; };
 		B3B97D4F25AA7B3600BEC4F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B97D4E25AA7B3600BEC4F6 /* Assets.xcassets */; };
 		B3B97D5225AA7B3600BEC4F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B97D5125AA7B3600BEC4F6 /* Preview Assets.xcassets */; };
+		B3B97D5C25AA7CEB00BEC4F6 /* TinyNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = B3B97D5B25AA7CEB00BEC4F6 /* TinyNetworking */; };
+		B3B97D6025AA7D3300BEC4F6 /* Model in Frameworks */ = {isa = PBXBuildFile; productRef = B3B97D5F25AA7D3300BEC4F6 /* Model */; };
+		B3B97D6225AA7D3300BEC4F6 /* ViewHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = B3B97D6125AA7D3300BEC4F6 /* ViewHelpers */; };
+		B3B97D6625AA7DDD00BEC4F6 /* episodes.json in Resources */ = {isa = PBXBuildFile; fileRef = B3B97D6425AA7DDD00BEC4F6 /* episodes.json */; };
+		B3B97D6725AA7DDD00BEC4F6 /* collections.json in Resources */ = {isa = PBXBuildFile; fileRef = B3B97D6525AA7DDD00BEC4F6 /* collections.json */; };
+		B3B97D6A25AA7E0800BEC4F6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B97D6925AA7E0800BEC4F6 /* Model.swift */; };
+		B3B97D6F25AA7EBC00BEC4F6 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B97D6E25AA7EBC00BEC4F6 /* Resource.swift */; };
+		B3B97D7325AA841F00BEC4F6 /* CollectionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B97D7225AA841F00BEC4F6 /* CollectionsList.swift */; };
+		B3B97D7625AA882200BEC4F6 /* CollectionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B97D7525AA882200BEC4F6 /* CollectionDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +29,12 @@
 		B3B97D4E25AA7B3600BEC4F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3B97D5125AA7B3600BEC4F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3B97D5325AA7B3600BEC4F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3B97D6425AA7DDD00BEC4F6 /* episodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = episodes.json; sourceTree = SOURCE_ROOT; };
+		B3B97D6525AA7DDD00BEC4F6 /* collections.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = collections.json; sourceTree = SOURCE_ROOT; };
+		B3B97D6925AA7E0800BEC4F6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B3B97D6E25AA7EBC00BEC4F6 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		B3B97D7225AA841F00BEC4F6 /* CollectionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsList.swift; sourceTree = "<group>"; };
+		B3B97D7525AA882200BEC4F6 /* CollectionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B97D6225AA7D3300BEC4F6 /* ViewHelpers in Frameworks */,
+				B3B97D6025AA7D3300BEC4F6 /* Model in Frameworks */,
+				B3B97D5C25AA7CEB00BEC4F6 /* TinyNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,11 +70,17 @@
 		B3B97D4925AA7B3300BEC4F6 /* SwiftTalk */ = {
 			isa = PBXGroup;
 			children = (
-				B3B97D4A25AA7B3300BEC4F6 /* SwiftTalkApp.swift */,
-				B3B97D4C25AA7B3300BEC4F6 /* ContentView.swift */,
-				B3B97D4E25AA7B3600BEC4F6 /* Assets.xcassets */,
+				B3B97D6525AA7DDD00BEC4F6 /* collections.json */,
+				B3B97D6425AA7DDD00BEC4F6 /* episodes.json */,
 				B3B97D5325AA7B3600BEC4F6 /* Info.plist */,
+				B3B97D4C25AA7B3300BEC4F6 /* ContentView.swift */,
+				B3B97D6925AA7E0800BEC4F6 /* Model.swift */,
+				B3B97D6E25AA7EBC00BEC4F6 /* Resource.swift */,
+				B3B97D4A25AA7B3300BEC4F6 /* SwiftTalkApp.swift */,
+				B3B97D4E25AA7B3600BEC4F6 /* Assets.xcassets */,
 				B3B97D5025AA7B3600BEC4F6 /* Preview Content */,
+				B3B97D7225AA841F00BEC4F6 /* CollectionsList.swift */,
+				B3B97D7525AA882200BEC4F6 /* CollectionDetails.swift */,
 			);
 			path = SwiftTalk;
 			sourceTree = "<group>";
@@ -85,6 +109,11 @@
 			dependencies = (
 			);
 			name = SwiftTalk;
+			packageProductDependencies = (
+				B3B97D5B25AA7CEB00BEC4F6 /* TinyNetworking */,
+				B3B97D5F25AA7D3300BEC4F6 /* Model */,
+				B3B97D6125AA7D3300BEC4F6 /* ViewHelpers */,
+			);
 			productName = SwiftTalk;
 			productReference = B3B97D4725AA7B3300BEC4F6 /* SwiftTalk.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +141,10 @@
 				Base,
 			);
 			mainGroup = B3B97D3E25AA7B3300BEC4F6;
+			packageReferences = (
+				B3B97D5A25AA7CEB00BEC4F6 /* XCRemoteSwiftPackageReference "tiny-networking" */,
+				B3B97D5E25AA7D3300BEC4F6 /* XCRemoteSwiftPackageReference "swift-talk-shared" */,
+			);
 			productRefGroup = B3B97D4825AA7B3300BEC4F6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,8 +159,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B97D6625AA7DDD00BEC4F6 /* episodes.json in Resources */,
 				B3B97D5225AA7B3600BEC4F6 /* Preview Assets.xcassets in Resources */,
 				B3B97D4F25AA7B3600BEC4F6 /* Assets.xcassets in Resources */,
+				B3B97D6725AA7DDD00BEC4F6 /* collections.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3B97D6A25AA7E0800BEC4F6 /* Model.swift in Sources */,
+				B3B97D7325AA841F00BEC4F6 /* CollectionsList.swift in Sources */,
+				B3B97D7625AA882200BEC4F6 /* CollectionDetails.swift in Sources */,
+				B3B97D6F25AA7EBC00BEC4F6 /* Resource.swift in Sources */,
 				B3B97D4D25AA7B3300BEC4F6 /* ContentView.swift in Sources */,
 				B3B97D4B25AA7B3300BEC4F6 /* SwiftTalkApp.swift in Sources */,
 			);
@@ -328,6 +367,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B3B97D5A25AA7CEB00BEC4F6 /* XCRemoteSwiftPackageReference "tiny-networking" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/objcio/tiny-networking";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		B3B97D5E25AA7D3300BEC4F6 /* XCRemoteSwiftPackageReference "swift-talk-shared" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/objcio/swift-talk-shared";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B3B97D5B25AA7CEB00BEC4F6 /* TinyNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3B97D5A25AA7CEB00BEC4F6 /* XCRemoteSwiftPackageReference "tiny-networking" */;
+			productName = TinyNetworking;
+		};
+		B3B97D5F25AA7D3300BEC4F6 /* Model */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3B97D5E25AA7D3300BEC4F6 /* XCRemoteSwiftPackageReference "swift-talk-shared" */;
+			productName = Model;
+		};
+		B3B97D6125AA7D3300BEC4F6 /* ViewHelpers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3B97D5E25AA7D3300BEC4F6 /* XCRemoteSwiftPackageReference "swift-talk-shared" */;
+			productName = ViewHelpers;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B3B97D3F25AA7B3300BEC4F6 /* Project object */;
 }

@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "swift-talk-shared",
+        "repositoryURL": "https://github.com/objcio/swift-talk-shared",
+        "state": {
+          "branch": "master",
+          "revision": "0238161c1bf1a3db01c6d51b801e6d02656199b4",
+          "version": null
+        }
+      },
+      {
+        "package": "TinyNetworking",
+        "repositoryURL": "https://github.com/objcio/tiny-networking",
+        "state": {
+          "branch": "master",
+          "revision": "a9af2917018e513c77061139fe3ce4e4d67cf259",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

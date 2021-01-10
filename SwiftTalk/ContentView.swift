@@ -1,16 +1,22 @@
-//
-//  ContentView.swift
-//  SwiftTalk
-//
-//  Created by Leo Picado on 1/9/21.
-//
-
 import SwiftUI
+import Combine
+import TinyNetworking
+import Model
+import ViewHelpers
 
 struct ContentView: View {
+  @ObservedObject var collections = Resource(endpoint: allCollections)
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+      Group {
+        if collections.value == nil {
+          Text("Loading ...")
+        } else {
+          NavigationView {
+            CollectionsList(collections: collections.value!)
+          }
+        }
+      }
     }
 }
 
