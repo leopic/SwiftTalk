@@ -1,28 +1,36 @@
 import SwiftUI
 import TinyNetworking
 import Model
+import Combine
 
 enum ImageError: Error {
   case something
 }
 
+extension Endpoint where A == UIImage {
+    init(imageURL url: URL) {
+        self.init(.get, url: url, expectedStatusCode: expected200to300) { data, _ in
+            guard let d = data, let i = UIImage(data: d) else {
+              return .failure(ImageError.something)
+            }
+            return .success(i)
+        }
+    }
+}
+
 struct CollectionDetails: View {
-  let collection: CollectionView
   @ObservedObject var image: Resource<UIImage>
+  @ObservedObject var store = sharedStore
+  var subs = Set<AnyCancellable>()
+
+  let collection: CollectionView
+  var episodes: [EpisodeView] {
+    store.sharedEpisodes.value?.filter { $0.collection == collection.id } ?? []
+  }
 
   init(collection: CollectionView) {
     self.collection = collection
-
-    let endpoint = Endpoint<UIImage>(.get, url: collection.artwork.png, expectedStatusCode: expected200to300) { data, _ in
-      guard let d = data,
-            let i = UIImage(data: d) else {
-        return .failure(ImageError.something)
-      }
-
-      return .success(i)
-    }
-
-    self.image = Resource<UIImage>(endpoint: endpoint)
+    self.image = Resource(endpoint: Endpoint(imageURL: collection.artwork.png))
   }
 
   var body: some View {
@@ -34,6 +42,12 @@ struct CollectionDetails: View {
       }
 
       Text(collection.description).lineLimit(nil)
+
+      List {
+        ForEach(episodes) { episode in
+          Text(episode.title)
+        }
+      }
     }
   }
 }

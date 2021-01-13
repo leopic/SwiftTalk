@@ -5,15 +5,20 @@ import Model
 import ViewHelpers
 
 struct ContentView: View {
-  @ObservedObject var collections = Resource(endpoint: allCollections)
+  @ObservedObject var store = sharedStore
+  var subs = Set<AnyCancellable>()
+
+  init() {
+    store.stream.sink { _ in }.store(in: &subs) // Have to kick-off the subscription
+  }
 
     var body: some View {
       Group {
-        if collections.value == nil {
-          Text("Loading ...")
+        if sharedStore.isLoading {
+          Text("Loading...")
         } else {
           NavigationView {
-            CollectionsList(collections: collections.value!)
+            CollectionsList(collections: store.sharedCollections.value!)
           }
         }
       }
