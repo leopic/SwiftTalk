@@ -24,9 +24,9 @@ final class Resource<A>: ObservableObject {
 
   private func load() -> Void {
     URLSession.shared.load(endpoint) { result in
-      DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+      DispatchQueue.main.async {
         self.value = try? result.get()
-      })
+      }
     }
   }
 }
