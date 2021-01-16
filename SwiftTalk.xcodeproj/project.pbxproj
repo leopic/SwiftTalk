@@ -55,6 +55,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B356B28B25B396AE008AA0DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3B97D4A25AA7B3300BEC4F6 /* SwiftTalkApp.swift */,
+				B356B28725B39215008AA0DC /* EpisodeView.swift */,
+				B356B28325B38EAE008AA0DC /* AllEpisodes.swift */,
+				B3B97D7525AA882200BEC4F6 /* CollectionDetails.swift */,
+				B3B97D7225AA841F00BEC4F6 /* CollectionsList.swift */,
+				B3B97D4C25AA7B3300BEC4F6 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B3B97D3E25AA7B3300BEC4F6 = {
 			isa = PBXGroup;
 			children = (
@@ -74,19 +87,14 @@
 		B3B97D4925AA7B3300BEC4F6 /* SwiftTalk */ = {
 			isa = PBXGroup;
 			children = (
+				B356B28B25B396AE008AA0DC /* Views */,
 				B3B97D6525AA7DDD00BEC4F6 /* collections.json */,
 				B3B97D6425AA7DDD00BEC4F6 /* episodes.json */,
 				B3B97D5325AA7B3600BEC4F6 /* Info.plist */,
-				B356B28325B38EAE008AA0DC /* AllEpisodes.swift */,
-				B3B97D7525AA882200BEC4F6 /* CollectionDetails.swift */,
-				B3B97D7225AA841F00BEC4F6 /* CollectionsList.swift */,
-				B3B97D4C25AA7B3300BEC4F6 /* ContentView.swift */,
 				B3B97D6925AA7E0800BEC4F6 /* Model.swift */,
 				B3B97D6E25AA7EBC00BEC4F6 /* Resource.swift */,
-				B3B97D4A25AA7B3300BEC4F6 /* SwiftTalkApp.swift */,
 				B3B97D4E25AA7B3600BEC4F6 /* Assets.xcassets */,
 				B3B97D5025AA7B3600BEC4F6 /* Preview Content */,
-				B356B28725B39215008AA0DC /* EpisodeView.swift */,
 			);
 			path = SwiftTalk;
 			sourceTree = "<group>";

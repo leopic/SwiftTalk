@@ -1,10 +1,3 @@
-//
-//  SwiftTalkApp.swift
-//  SwiftTalk
-//
-//  Created by Leo Picado on 1/9/21.
-//
-
 import SwiftUI
 
 @main
