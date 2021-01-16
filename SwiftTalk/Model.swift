@@ -40,3 +40,17 @@ func sample<T: Codable>(name: String) -> T {
   return try! decoder.decode(T.self, from: data)
 }
 
+enum ImageError: Error {
+  case something
+}
+
+extension Endpoint where A == UIImage {
+    init(imageURL url: URL) {
+        self.init(.get, url: url, expectedStatusCode: expected200to300) { data, _ in
+            guard let d = data, let i = UIImage(data: d) else {
+              return .failure(ImageError.something)
+            }
+            return .success(i)
+        }
+    }
+}

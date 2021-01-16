@@ -17,8 +17,13 @@ struct ContentView: View {
         if sharedStore.isLoading {
           Text("Loading...")
         } else {
-          NavigationView {
-            CollectionsList(collections: store.sharedCollections.value!)
+          TabView {
+            NavigationView {
+              CollectionsList(collections: store.sharedCollections.value!)
+            }.tabItem { Text("Collections") }.tag(0)
+            NavigationView {
+              AllEpisodes(episodes: store.sharedEpisodes.value!)
+            }.tabItem { Text("Episodes") }.tag(1)
           }
         }
       }

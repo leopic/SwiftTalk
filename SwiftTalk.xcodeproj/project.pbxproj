@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B356B28425B38EAE008AA0DC /* AllEpisodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356B28325B38EAE008AA0DC /* AllEpisodes.swift */; };
+		B356B28825B39215008AA0DC /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356B28725B39215008AA0DC /* EpisodeView.swift */; };
 		B3B97D4B25AA7B3300BEC4F6 /* SwiftTalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B97D4A25AA7B3300BEC4F6 /* SwiftTalkApp.swift */; };
 		B3B97D4D25AA7B3300BEC4F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B97D4C25AA7B3300BEC4F6 /* ContentView.swift */; };
 		B3B97D4F25AA7B3600BEC4F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B97D4E25AA7B3600BEC4F6 /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B356B28325B38EAE008AA0DC /* AllEpisodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEpisodes.swift; sourceTree = "<group>"; };
+		B356B28725B39215008AA0DC /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
 		B3B97D4725AA7B3300BEC4F6 /* SwiftTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B97D4A25AA7B3300BEC4F6 /* SwiftTalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTalkApp.swift; sourceTree = "<group>"; };
 		B3B97D4C25AA7B3300BEC4F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,14 +77,16 @@
 				B3B97D6525AA7DDD00BEC4F6 /* collections.json */,
 				B3B97D6425AA7DDD00BEC4F6 /* episodes.json */,
 				B3B97D5325AA7B3600BEC4F6 /* Info.plist */,
+				B356B28325B38EAE008AA0DC /* AllEpisodes.swift */,
+				B3B97D7525AA882200BEC4F6 /* CollectionDetails.swift */,
+				B3B97D7225AA841F00BEC4F6 /* CollectionsList.swift */,
 				B3B97D4C25AA7B3300BEC4F6 /* ContentView.swift */,
 				B3B97D6925AA7E0800BEC4F6 /* Model.swift */,
 				B3B97D6E25AA7EBC00BEC4F6 /* Resource.swift */,
 				B3B97D4A25AA7B3300BEC4F6 /* SwiftTalkApp.swift */,
 				B3B97D4E25AA7B3600BEC4F6 /* Assets.xcassets */,
 				B3B97D5025AA7B3600BEC4F6 /* Preview Content */,
-				B3B97D7225AA841F00BEC4F6 /* CollectionsList.swift */,
-				B3B97D7525AA882200BEC4F6 /* CollectionDetails.swift */,
+				B356B28725B39215008AA0DC /* EpisodeView.swift */,
 			);
 			path = SwiftTalk;
 			sourceTree = "<group>";
@@ -173,7 +179,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B356B28825B39215008AA0DC /* EpisodeView.swift in Sources */,
 				B3B97D6A25AA7E0800BEC4F6 /* Model.swift in Sources */,
+				B356B28425B38EAE008AA0DC /* AllEpisodes.swift in Sources */,
 				B3B97D7325AA841F00BEC4F6 /* CollectionsList.swift in Sources */,
 				B3B97D7625AA882200BEC4F6 /* CollectionDetails.swift in Sources */,
 				B3B97D6F25AA7EBC00BEC4F6 /* Resource.swift in Sources */,
