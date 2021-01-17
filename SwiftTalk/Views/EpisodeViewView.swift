@@ -1,6 +1,17 @@
 import SwiftUI
 import Model
 import TinyNetworking
+import Combine
+
+final class EpisodeProgress: ObservableObject {
+  @Published var progress: TimeInterval
+  let episode: EpisodeView
+
+  init(episode: EpisodeView, progress: TimeInterval) {
+    self.episode = episode
+    self.progress = progress
+  }
+}
 
 struct PlayingState {
   var isPlaying = false {
@@ -17,6 +28,7 @@ struct PlayingState {
 struct EpisodeViewView: View {
   let episode: EpisodeView
   @State var playingState = PlayingState()
+  @ObservedObject var progress: EpisodeProgress
   @ObservedObject var image: Resource<UIImage>
 
   var overlay: AnyView? {
@@ -31,6 +43,7 @@ struct EpisodeViewView: View {
   init(episode: EpisodeView) {
     self.episode = episode
     self.image = Resource(endpoint: Endpoint(imageURL: episode.poster_url))
+    self.progress = EpisodeProgress(episode: episode, progress: TimeInterval(0))
   }
 
   var body: some View {
@@ -45,11 +58,12 @@ struct EpisodeViewView: View {
         Player(
           url: episode.preview_url!,
           overlay: overlay,
-          isPlaying: $playingState.isPlaying
-        )
-          .aspectRatio(16/9, contentMode: .fit)
+          isPlaying: $playingState.isPlaying,
+          playPosition: $progress.progress
+        ).aspectRatio(16/9, contentMode: .fit)
         Spacer()
       }
+      Slider(value: $progress.progress, in: 0...TimeInterval(15))
     }
   }
 }
