@@ -7,7 +7,9 @@ struct AllEpisodes: View {
   var body: some View {
     List {
       ForEach(episodes) { episode in
-        EpisodeItemView(episode)
+        NavigationLink(destination: EpisodeViewView(episode: episode)) {
+          EpisodeItemView(episode)
+        }
       }
     }.navigationTitle("All Episodes")
   }
