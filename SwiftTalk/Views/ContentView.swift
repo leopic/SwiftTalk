@@ -1,8 +1,5 @@
 import SwiftUI
 import Combine
-import TinyNetworking
-import Model
-import ViewHelpers
 
 struct ContentView: View {
   @ObservedObject var store = sharedStore
