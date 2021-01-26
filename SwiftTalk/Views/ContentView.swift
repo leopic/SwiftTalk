@@ -24,6 +24,9 @@ struct ContentView: View {
           NavigationView {
             AllEpisodes(episodes: store.sharedEpisodes.value!)
           }.tabItem { Text("Episodes") }.tag(1)
+          NavigationView {
+            Account()
+          }.tabItem({ Text("Account") }).tag(2)
         }
       }
     }

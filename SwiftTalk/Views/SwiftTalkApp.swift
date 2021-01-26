@@ -4,7 +4,7 @@ import SwiftUI
 struct SwiftTalkApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          ContentView()
         }
     }
 }
