@@ -5,11 +5,21 @@ import Combine
 
 final class EpisodeProgress: ObservableObject {
   @Published var progress: TimeInterval
+
   let episode: EpisodeView
+
+  private var subs = Set<AnyCancellable>()
 
   init(episode: EpisodeView, progress: TimeInterval) {
     self.episode = episode
     self.progress = progress
+
+    self.$progress
+      .throttle(for: 2.5, scheduler: RunLoop.main, latest: true)
+      .removeDuplicates()
+      .sink(receiveValue: { time in
+        print("_ got new time: \(time)")
+      }).store(in: &subs)
   }
 }
 
